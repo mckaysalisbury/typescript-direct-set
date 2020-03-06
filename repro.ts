@@ -25,3 +25,10 @@ const workaroundToWorkaround: I = {
 workaroundToWorkaround.optional = { required: 1 }; // So I have to explicitly state that the value of this property is not null to get the intended behavior
 
 workaroundToWorkaround.optional.required; // This one doesn't have a problem
+
+const alternateWorkaroundToWorkaround: I = {
+  optional: { required: 1 },
+  required: 1,
+};
+
+alternateWorkaroundToWorkaround.optional!.required; // This shouldn't be necessary. Eew.
