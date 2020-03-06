@@ -17,7 +17,7 @@ workaround = {
   required: 1
 };
 
-workaround.optional.required;  // This one I think is wrong. I'm explicitly setting the 
+workaround.optional.required;  // This one I think is wrong. I'm explicitly setting the value in this case.
 
 const workaroundToWorkaround: I = {
   required: 1,
