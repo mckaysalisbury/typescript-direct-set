@@ -32,3 +32,9 @@ const alternateWorkaroundToWorkaround: I = {
 };
 
 alternateWorkaroundToWorkaround.optional!.required; // This shouldn't be necessary. Eew.
+
+const reasonableWorkaroundToWorkaround: I & { optional: I } = { // I shouldn't have to do this, but I think it's better than any of the other options.
+  optional: { required: 1 },
+  required: 1,
+}
+reasonableWorkaroundToWorkaround.optional.required; 
